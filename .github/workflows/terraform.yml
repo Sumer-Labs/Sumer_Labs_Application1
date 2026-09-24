@@ -12,6 +12,7 @@ jobs:
     uses: Sumer-Labs/Azure_Central_Terraform_Modules/.github/workflows/terraform-ci.yml@main
 
     with:
+      application_id: app1
       environment: application1_dev
 
     secrets:
