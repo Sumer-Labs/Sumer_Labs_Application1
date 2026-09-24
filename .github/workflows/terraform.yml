@@ -10,3 +10,11 @@ permissions:
 jobs:
   terraform-ci:
     uses: Sumer-Labs/Azure_Central_Terraform_Modules/.github/workflows/terraform-ci.yml@main
+
+    with:
+      environment: application1_dev
+
+    secrets:
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
