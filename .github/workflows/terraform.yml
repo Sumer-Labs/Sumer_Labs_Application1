@@ -1,0 +1,8 @@
+name: Terraform
+
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform-ci:
+    uses: Sumer-Labs/Azure_Central_Terraform_Modules/.github/workflows/terraform-ci.yml@main
