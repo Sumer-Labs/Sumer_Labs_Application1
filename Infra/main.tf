@@ -1,5 +1,5 @@
 module "vnet" {
-  source = "git::https://github.com/Sumer-Labs/Azure_Central_Terraform_Modules.git//Infra/networking/vnet?ref=main"
+  source = "git::https://github.com/Sumer-Labs/Azure_Central_Terraform_Modules.git//Infra/networking/vnet?ref=platform-v1.0.0"
 
   name                = "sumerlabs-app1-dev-vnet"
   location            = "Central India"
