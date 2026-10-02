@@ -28,3 +28,6 @@ module "vnet" {
     application = "app1"
   }
 }
+
+
+# CI Gate validation test
