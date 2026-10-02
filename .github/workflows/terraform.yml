@@ -1,4 +1,4 @@
-name: Terraform
+name: Platform PR
 
 on:
   pull_request:
@@ -8,16 +8,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  id-token: write
   contents: read
 
 jobs:
-  terraform-ci:
-    uses: Sumer-Labs/Azure_Central_Terraform_Modules/.github/workflows/terraform-ci.yml@main
+  platform-pr:
+    uses: Sumer-Labs/Azure_Central_Terraform_Modules/.github/workflows/platform-pr.yml@main
 
     with:
       application_id: app1
       environment: application1_dev
+      base_sha: ${{ github.event.pull_request.base.sha }}
+      head_sha: ${{ github.event.pull_request.head.sha }}
 
     secrets:
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
