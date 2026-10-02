@@ -25,7 +25,6 @@ module "vnet" {
 
   tags = {
     environment = "dev"
-    managed_by  = "terraform"
     application = "app1"
   }
 }
